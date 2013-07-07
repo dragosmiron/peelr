@@ -14,11 +14,31 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install peelr
+    $ gem install peelr --pre
 
 ## Usage
 
-TODO: Write usage instructions here
+  ```ruby
+  class User
+    def survive
+      peelr!
+      #...
+    end
+  end
+  
+  class Car
+    attr_reader :user
+    def initialize(user)
+      @user = user
+    end
+    
+    def crash
+      user.survive
+    end
+  end
+  
+  Car.new(User.new).crash #=> ### 'survive' called inside 'crash' (example_file.rb:13)
+  ```
 
 ## Contributing
 
