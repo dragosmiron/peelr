@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install peelr --pre
+    $ gem install peelr
 
 ## Usage
 
